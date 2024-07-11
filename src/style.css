@@ -9,7 +9,7 @@
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 
     background: url('./img/restaurant-background-img.jpg');
     background-size: cover;
@@ -92,20 +92,29 @@
     line-height: normal;
 }
 
+.footer {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 /* CSS for Menu Tab */
 .test-container {
     width: 100%;
-    height: 45rem;
-    /* TODO: Change rem to vh */
-    background-color: #d4d4d4;gap: 1rem;
+    /* height: 45rem; */
+    height: 80vh;
+    /* background-color: #d4d4d4; */
+    background-color: #ededed;
     overflow: auto;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.25);
 }
 
 .cards-container {
@@ -156,7 +165,7 @@
     text-align: center;
     font-size: 1.125rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: normal;
 }
 
@@ -174,7 +183,7 @@
     width: 8.5625rem;
     height: 2.5625rem;
     border-radius: 0.75rem;
-    background: #F37500;
+    background: #1e4f00;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border: none;
     color: #FFF;
@@ -189,4 +198,19 @@ img {
     object-fit: cover;
     height: 100%;
     width: 100%;
+}
+
+/* CSS for About Tab */
+
+.description-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    width: 600px;
+    font-size: 1.25rem;
+    /* line-height: 1.2; */
+    line-height: 150%;
 }

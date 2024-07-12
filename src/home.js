@@ -1,6 +1,7 @@
 
 export default function setUpHomePage() {
     const main = document.querySelector('.main');
+    main.classList.add('h100');
 
     const introduction = document.createElement('div');
     introduction.classList.add('introduction');

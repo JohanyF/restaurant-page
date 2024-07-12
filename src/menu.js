@@ -8,36 +8,41 @@ let foods = [
         name: 'Pozole',
         price: '$12.99',
         calories: '1300',
-        img: pozoleImg
+        img: pozoleImg,
+        photoCredit: 'Photo by Jarritos Mexican Soda on Unsplash'
     },
     {
         name: 'Tacos',
         price: '$2.99',
         calories: '500',
-        img: tacosImg
+        img: tacosImg,
+        photoCredit: 'Photo by Tai\'s Captures on Unsplash'
     },
     {
         name: 'Tamales',
         price: '$13.99',
         calories: '1200',
-        img: tamalesImg
+        img: tamalesImg,
+        photoCredit: 'Photo by Tai\'s Captures on Unsplash'
     },
     {
         name: 'Tostadas',
         price: '$3.99',
         calories: '550',
-        img: tostadasImg
+        img: tostadasImg,
+        photoCredit: 'Photo by Braulio Gómez on Unsplash'
     },
 ];
 
 export default function setUpMenuPage() {
     const main = document.querySelector('.main');
+    main.classList.remove('h100');
 
     const test_container = document.createElement('div');
     test_container.classList.add('test-container');
 
     const h1 = document.createElement('h1');
-    // Add a class to this element once you add create the CSS class for the Menu h1
+    h1.classList.add('menu-text');
     h1.textContent = 'Menu';
 
     const cards_container = document.createElement('div');
@@ -52,6 +57,10 @@ export default function setUpMenuPage() {
     foods.forEach((food) => {
         const menu_card = document.createElement('div');
         menu_card.classList.add('menu-card');
+
+        const photoCredit = document.createElement('p');
+        photoCredit.classList.add('credit-text');
+        photoCredit.textContent = food.photoCredit;
     
         const food_img = new Image();
         food_img.src = food.img;
@@ -63,7 +72,7 @@ export default function setUpMenuPage() {
         food_info.classList.add('food-info');
     
         const h2 = document.createElement('h2');
-        h2.text = food.name;
+        h2.textContent = food.name;
     
         const info = document.createElement('div');
         info.classList.add('info');
@@ -84,6 +93,7 @@ export default function setUpMenuPage() {
 
         cards_container.appendChild(menu_card);
 
+        menu_card.appendChild(photoCredit);
         menu_card.appendChild(food_img);
         menu_card.appendChild(information);
 

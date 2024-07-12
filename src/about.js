@@ -1,6 +1,7 @@
 
 export default function setUpAboutPage() {
     const main = document.querySelector('.main');
+    main.classList.remove('h100');
 
     const test_container = document.createElement('div');
     test_container.classList.add('test-container');

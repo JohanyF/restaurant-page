@@ -1,32 +1,33 @@
-import './style.css';
-import setUpHomePage from './home.js';
-import setUpMenuPage from './menu.js';
-import setUpAboutPage from './about.js';
+import "./style.css";
+import setUpHomePage from "./home.js";
+import setUpMenuPage from "./menu.js";
+import setUpAboutPage from "./about.js";
 
 setUpHomePage();
 
 const removeMainChild = () => {
-    const main = document.querySelector('.main');
-    const child = main.lastElementChild;
-    child.remove();
-}
+  const main = document.querySelector(".main");
+  const child = main.lastElementChild;
+  child.remove();
+};
 
-const homeBtn = document.querySelector('#home');
+const homeBtn = document.querySelector("#home");
 
-homeBtn.addEventListener('click', () => {
-    removeMainChild();
-    setUpHomePage();
-})
-const menuBtn = document.querySelector('#menu');
+homeBtn.addEventListener("click", () => {
+  removeMainChild();
+  setUpHomePage();
+});
 
-menuBtn.addEventListener('click', () => {
-    removeMainChild();
-    setUpMenuPage();
-})
+const menuBtn = document.querySelector("#menu");
 
-const aboutBtn = document.querySelector('#about');
+menuBtn.addEventListener("click", () => {
+  removeMainChild();
+  setUpMenuPage();
+});
 
-aboutBtn.addEventListener('click', () => {
-    removeMainChild();
-    setUpAboutPage();
-})
+const aboutBtn = document.querySelector("#about");
+
+aboutBtn.addEventListener("click", () => {
+  removeMainChild();
+  setUpAboutPage();
+});
